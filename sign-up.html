@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCo_pwojk9jFrblpRraoIFFaQQhoglp5Ds",
+                authDomain: "onlinewebapp-c04cd.firebaseapp.com",
+                databaseURL: "https://onlinewebapp-c04cd.firebaseio.com",
+                projectId: "onlinewebapp-c04cd",
+                storageBucket: "onlinewebapp-c04cd.appspot.com",
+                messagingSenderId: "28482593341",
+                appId: "1:28482593341:web:5ceb42757fc06f06680054",
+                measurementId: "G-QD4888M0QZ",
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Full-width input fields */
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 40%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #075d52;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 40%;
+            opacity: 0.9;
+            font-size: 18px;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn,
+        .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            margin-top: 30px;
+        }
+
+        /* Clear floats */
+
+        header {
+            background-color: #075d52;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .nav {
+            display: flex;
+            color: white;
+            justify-content: center;
+        }
+
+        .img {
+            margin-top: 10px;
+        }
+
+        .nav h2 {
+            margin-top: 17px;
+            margin-left: 10px;
+        }
+
+        .sign {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 17px;
+        }
+        .login a {
+            text-decoration: none;
+            color: white;
+        }
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <body>
+        <header>
+            <nav>
+                <div class="nav">
+                    <img
+                        class="img"
+                        src="https://cdn.iconscout.com/icon/free/png-256/whatsapp-2158420-1814508.png"
+                        height="40px"
+                        alt=""
+                    />
+                    <h2>iChat App</h2>
+                </div>
+            </nav>
+        </header>
+        <br />
+        <center>
+            <div class="container">
+                <h1 class="sign">Sign up Form</h1>
+                <input type="text" id="text" placeholder="Enter Your name" />
+                <br />
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Example@gmail.com"
+                />
+                <br />
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Six character password"
+                />
+                <br />
+                <p id="user"></p>
+                <button onclick="signup()">Sign up</button>
+            </div>
+            <br />
+            <br />
+            <hr />
+            <p>OR</p>
+            <br />
+            <a href="login.html">
+                <button class="login" >Login</button></a
+            >
+            <br />
+            <button onclick="facebook_login()">
+               </i>Login With Facebook  <i class="fa fa-facebook-f"></i>
+            </button>
+        </center>
+        <br />
+        <br />
+    </body>
+    <script src="js/user.js"></script>
+    <script src="demo.js"></script>
+</html>

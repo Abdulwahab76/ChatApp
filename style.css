@@ -1,0 +1,123 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.chat {
+    width: 360px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25");
+    /* background-color: red; */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.chat-header {
+    text-align: center;
+    background-color: #075d52;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    font-family: sans-serif;
+}
+.chat-windows {
+    height: 390px;
+    width: 100%;
+    overflow-y: auto;
+}
+#message-Form {
+    background-color: #075d52;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 100%;
+}
+#msg-input {
+    padding: 7px;
+    border-radius: 20px;
+    border: 0;
+    width: 70%;
+    outline: none;
+    margin-right: 10px;
+}
+#msg-btn {
+    width: 20%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+}
+
+.msg {
+    list-style: none;
+}
+span {
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-align: left;
+    margin: 5px 5px 5px 10px;
+    box-shadow: 0.2px, 3px 2px rgba(0, 0, 0, 0.3);
+}
+i {
+    font-weight: bold;
+}
+.my {
+    text-align: right;
+}
+.my span {
+    background-color: #d0eeb2;
+    color: black;
+}
+.msg:focus {
+    background-color: #d0eeb2;
+}
+.icon {
+    margin: 5px;
+}
+#nameform {
+    background-color: white;
+    max-width: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    box-shadow: 0.3px 0.3px 2px rgba(0, 0, 0, 0.2);
+    animation: modalup 0.7s 0.3s forwards;
+}
+#name-input {
+    border: none;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #363636;
+    outline: none;
+}
+#name-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #075d52;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes modalup {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}

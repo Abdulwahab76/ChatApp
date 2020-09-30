@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iChat - Realtime Chat app</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCo_pwojk9jFrblpRraoIFFaQQhoglp5Ds",
+            authDomain: "onlinewebapp-c04cd.firebaseapp.com",
+            databaseURL: "https://onlinewebapp-c04cd.firebaseio.com",
+            projectId: "onlinewebapp-c04cd",
+            storageBucket: "onlinewebapp-c04cd.appspot.com",
+            messagingSenderId: "28482593341",
+            appId: "1:28482593341:web:25db071a6ad68034680054",
+            measurementId: "G-41JVZKTFS4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+</head>
+
+<body>
+    <div class="chat">
+        <form id="nameform">
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="name-btn">Enter</button>
+        </form>
+        <div class="chat-header">iChat App
+        </div>
+        <div class="chat-windows" id="chat-windows">
+            <ul id="messages">
+
+            </ul>
+            <form id="message-Form">
+                <input type="text" id="msg-input" placeholder="Enter a message">
+                <button onclick="add()" id="msg-btn">Send</button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"></script>
+<script src="demo.js"></script>
+<script src="/js/user.js"></script>
+
+
+</html>
